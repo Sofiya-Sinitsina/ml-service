@@ -43,4 +43,4 @@ def predict(data: InputData):
     df = pd.DataFrame([data.dict()])
     prediction = model.predict(df)
 
-    return {"prediction": float(prediction[0])}
+    return {"prediction": float(prediction[0]), "data": data}
